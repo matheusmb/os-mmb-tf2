@@ -8,16 +8,11 @@
 #ifndef DEFINITIONS_H
 #define	DEFINITIONS_H
 
-#ifdef	__cplusplus
-extern "C" {
-#endif
+#include <stdio.h>
+#include <stdlib.h>
 
-
-
-
-#ifdef	__cplusplus
-}
-#endif
+#define MAX_TERMINAL_INPUT 200
+#define DEFAULT_STR_SIZE 200
 
 #endif	/* DEFINITIONS_H */
 

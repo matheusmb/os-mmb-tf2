@@ -39,7 +39,8 @@ OBJECTFILES= \
 	${OBJECTDIR}/kernel.o \
 	${OBJECTDIR}/main.o \
 	${OBJECTDIR}/mm.o \
-	${OBJECTDIR}/pm.o
+	${OBJECTDIR}/pm.o \
+	${OBJECTDIR}/terminal.o
 
 
 # C Compiler Flags
@@ -90,6 +91,11 @@ ${OBJECTDIR}/pm.o: pm.c
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.c) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/pm.o pm.c
+
+${OBJECTDIR}/terminal.o: terminal.c 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.c) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/terminal.o terminal.c
 
 # Subprojects
 .build-subprojects:
