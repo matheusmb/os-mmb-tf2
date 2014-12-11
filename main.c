@@ -14,18 +14,12 @@
  */
 int main(int argc, char** argv) {
     
+    
+    KernelInit();
     TerminalInit();
     
-    printf("Oiii");
-    unsigned long int i = 0;
-    while (1) {
-        if(i  == 999999999) {
-            printf("Working\n");
-            i = 0;
-        }
-        
-        i++;
-    }
+   
+
 
     return (EXIT_SUCCESS);
 }
